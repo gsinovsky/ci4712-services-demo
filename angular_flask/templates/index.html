@@ -1,41 +1,39 @@
 <!doctype html>
-<html lang="en" ng-app="AngularFlask">
+<html lang="en" ng-app="DemoTwitterSOA">
 <head>
 	<meta charset="utf-8">
 	<title>SOA Demo</title>
 
 	<link rel="stylesheet" href="/static/css/bootstrap.css">
-	<link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/lib/json-formatter/dist/json-formatter.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.js"></script>
+    <script src="/static/js/oauth.js"></script>
 
-	<script src="/static/js/app.js"></script>
-	<script src="/static/js/controllers.js"></script>
- 	<script src="/static/js/services.js"></script>
 
-	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="/static/lib/ng-twitter-api/dist/ng-twitter-api.min.js"></script>
+    <script src="/static/lib/json-formatter/dist/json-formatter.js"></script>
+    <script src="/static/lib/jsSHA/src/sha1.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/controllers.js"></script>
+    <script src="/static/js/services.js"></script>
+
 
 </head>
 <body>
 	<div id="header" class="header navbar navbar-static-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/">Arquitectura Orientada a Servicios: Demo</a>
+				<a class="brand" href="/">CI4712 Ingeniería de Software II</a>
 			</div>
 		</div>
 	</div>
 	<div class="container page">
-		<div id="content" class="container main" ng-view>
-		</div>
-		<hr>
-		<footer id="footer" class="footer">
-			<div class="footer-right">
-				<span>&copy; 2016 Universidad Simón Bolívar</span>
-			</div>
-		</footer>
+		<div id="content" class="container main" ng-view></div>
 	</div>
 </body>
 </html>

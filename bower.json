@@ -19,6 +19,6 @@
     "tests"
   ],
   "dependencies": {
-    "ng-twitter-api": "~0.1.5"
+    "json-formatter": "~0.4.2"
   }
 }

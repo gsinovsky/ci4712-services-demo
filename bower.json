@@ -1,0 +1,24 @@
+{
+  "name": "ci4712-services-demo",
+  "homepage": "https://github.com/gsinovsky/ci4712-services-demo",
+  "authors": [
+    "Gustavo Siñovsky <gsinovsky@talpor.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-twitter-api": "~0.1.5"
+  }
+}

@@ -6,7 +6,7 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 		$routeProvider
 		.when('/', {
 			templateUrl: 'static/partials/landing.html',
-			controller: IndexController
+			controller: BaseController
 		});
 		$locationProvider.html5Mode(true);
 	}])

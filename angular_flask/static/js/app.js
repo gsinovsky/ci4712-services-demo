@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('AngularFlask', ['angularFlaskServices'])
+angular.module('AngularFlask', ['angularFlaskServices', 'ngRoute'])
 	.config(['$routeProvider', '$locationProvider',
 		function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -8,6 +8,5 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 			templateUrl: 'static/partials/landing.html',
 			controller: BaseController
 		});
-		$locationProvider.html5Mode(true);
 	}])
 ;

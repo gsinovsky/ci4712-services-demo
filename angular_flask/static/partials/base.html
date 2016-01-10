@@ -1,0 +1,35 @@
+<div class="container" ng-controller="TwitterController">
+    <h1>Arquitectura Orientada a Servicios: Demo </h1>
+    <div class="btn-group" role="group">
+        <button ng-click="connectButton()" id="connectButton" type="button" class="btn btn-primary">Conectar a servicio de Twitter</button>
+        <button ng-click="refreshTimeline()" id="getTimelineButton" type="button" class="btn btn-info" style="display:none;">Obtener tweets recientes</button>
+        <button ng-click="signOut()" id="signOut" type="button" class="btn btn-link" style="display:none;">Cerrar sesión</button>
+    </div>  
+    <div class="row">                   
+        <div class="col-xs-12" id="results">
+            <div class="row tweet" ng-repeat="t in tweets track by $index">
+
+                <div class="col-xs-2 col-sm-1 twitter-image">
+                    <img ng-src="{{t.user.profile_image_url}}" class="img-circle">
+                </div>
+                <div class="col-xs-10 col-sm-11 twitter-text">
+                    <small>{{t.user.name}}</small><br> <span ng-bind-html="t.text"></span>
+                </div>
+                <div class="json">
+                    <div class="tweet-json">
+                        <json-formatter json="t"></json-formatter>
+                    </div>
+                </div>
+
+            </div>
+
+            <div ng-show="rateLimitError">
+              Límite de acceso al API excedida, por favor espera un momento antes de solicitar de nuevo.
+            </div>
+            <div class="load-more">
+                <br/>
+                <button type="button" class="btn btn-info" id="load-more" ng-click="refreshTimeline(tweets[tweets.length-1].id)" ng-show="tweets">Load More</button>
+            </div>
+        </div>
+    </div>
+</div>
